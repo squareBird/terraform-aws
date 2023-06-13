@@ -18,15 +18,15 @@ provider "aws" {
 
 module "vpc" {
   source       = "./vpc"
-  vpc_cidr     = "10.0.0.0/16"
-  subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
+  vpc_cidr     = var.vpc_cidr
+  subnet_cidrs = var.subnet_cidrs
 }
 
 module "ec2" {
   source           = "./ec2"
-  instance_count   = 2
-  instance_type    = "t2.micro"
-  subnet_id        = module.vpc.subnet_ids[0]
+  instance_count   = var.instance_count
+  instance_type    = var.instance_type
+  subnet_id        = var.subnet_cidrs
 }
 
 terraform {
