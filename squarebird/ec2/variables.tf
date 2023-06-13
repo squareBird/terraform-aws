@@ -12,8 +12,8 @@ variable "subnet_id" {
   description = "Subnet ID"
   type        = string
 }
-
-variable "load_balancer_id" {
-  description = "Load Balancer ID"
-  type        = string
-}
+#
+#variable "load_balancer_id" {
+#  description = "Load Balancer ID"
+#  type        = string
+#}
