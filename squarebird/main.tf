@@ -10,6 +10,10 @@ terraform {
 provider "aws" {
   profile = "squarebird"
   region = "ap-northeast-2"
+  # variables.tf에 정의
+  # Terraform Cloud에서 변수로 정의해줄 수 있음
+  access_key = var.aws_access_key_id
+  secret_key = var.aws_secret_access_key
 }
 
 module "vpc" {
