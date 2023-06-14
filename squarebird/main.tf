@@ -22,10 +22,10 @@ module "vpc" {
   subnet_cidrs = var.subnet_cidrs
 }
 
-module "ec2" {
+module "jenkins" {
   source           = "./ec2"
-  instance_count   = var.instance_count
-  instance_type    = var.instance_type
+#  instance_count   = var.instance_count
+#  instance_type    = var.instance_type
   subnet_id        = module.vpc.subnet_ids[0]
 }
 
