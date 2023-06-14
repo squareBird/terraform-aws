@@ -8,7 +8,6 @@ terraform {
 }
 
 provider "aws" {
-  profile    = "squarebird"
   region     = "ap-northeast-2"
   # variables.tf에 정의
   # Terraform Cloud에서 변수로 정의해줄 수 있의
@@ -47,13 +46,4 @@ module "jenkins" {
   instance_type  = "t2.micro"
   ami            = "ami-0462a914135d20297"
   subnet_id      = module.public_subnet.subnet_ids[0] // 향후 랜덤값 사용하도록 변경 예정
-}
-
-terraform {
-  backend "s3" {
-    bucket         = "squarebird-terraform-state-s3"
-    key            = "terraform.tfstate"
-    region         = "ap-northeast-2"
-    dynamodb_table = "terraform-state-lock"
-  }
 }
