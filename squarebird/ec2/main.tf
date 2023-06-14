@@ -1,6 +1,6 @@
 resource "aws_instance" "ec2" {
   count         = var.instance_count
-  ami           = "ami-0462a914135d20297"
+  ami           = var.ami
   instance_type = var.instance_type
-  subnet_id     = var.subnet_id
+  subnet_id     = var.subnet_id[count.index]
 }
