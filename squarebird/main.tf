@@ -44,7 +44,7 @@ module "jenkins" {
   instance_count = 1
   instance_type  = "t2.micro"
   ami            = "ami-0462a914135d20297"
-  subnet_id      = module.public_subnet.subnet_ids
+  subnet_id      = module.public_subnet.subnet_ids[0] // 향후 랜덤값 사용하도록 변경 예정
 }
 
 terraform {
