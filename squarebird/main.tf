@@ -16,6 +16,7 @@ provider "aws" {
   secret_key = var.aws_secret_access_key
 }
 
+# main vpc
 module "main_vpc" {
   source   = "./vpc"
   vpc_cidr = "192.168.0.0/16"
