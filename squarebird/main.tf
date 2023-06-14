@@ -26,7 +26,7 @@ module "ec2" {
   source           = "./ec2"
   instance_count   = var.instance_count
   instance_type    = var.instance_type
-  subnet_id        = var.subnet_id
+  subnet_id        = module.vpc.subnet_ids[0]
 }
 
 terraform {
