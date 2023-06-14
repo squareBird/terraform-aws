@@ -18,11 +18,6 @@ variable "instance_type" {
   type        = string
 }
 
-variable "subnet_id" {
-  description = "Subnet ID"
-  type        = string
-}
-
 # Terraform Cloud와 연동을위해 변수 정의
 variable "aws_access_key_id" {
   description = "AWS Access Key Id"
