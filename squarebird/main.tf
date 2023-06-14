@@ -48,7 +48,7 @@ module "jenkins" {
 
 terraform {
   backend "s3" {
-    bucket         = "squarebird-terraform-state"
+    bucket         = "squarebird-terraform-state-s3"
     key            = "terraform.tfstate"
     region         = "ap-northeast-2"
     dynamodb_table = "terraform-state-lock"
