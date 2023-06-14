@@ -8,15 +8,15 @@ variable "subnet_cidrs" {
   type        = list(string)
 }
 
-#variable "instance_count" {
-#  description = "Number of EC2 instances"
-#  type        = number
-#}
-#
-#variable "instance_type" {
-#  description = "Type of EC2 instance"
-#  type        = string
-#}
+variable "instance_count" {
+  description = "Number of EC2 instances"
+  type        = number
+}
+
+variable "instance_type" {
+  description = "Type of EC2 instance"
+  type        = string
+}
 
 # Terraform Cloud와 연동을위해 변수 정의
 variable "aws_access_key_id" {
