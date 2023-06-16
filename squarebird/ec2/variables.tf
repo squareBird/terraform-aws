@@ -17,6 +17,11 @@ variable "ami" {
   description = "AMI"
   type = string
 }
+
+variable "instance_name" {
+  description = "Instance naem"
+  type = string
+}
 #
 #variable "load_balancer_id" {
 #  description = "Load Balancer ID"

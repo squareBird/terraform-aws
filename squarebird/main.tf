@@ -42,6 +42,7 @@ module "priavte_subnet" {
 
 module "jenkins" {
   source         = "./ec2"
+  instance_name = "Jenkins"
   instance_count = 1
   instance_type  = "t2.micro"
   ami            = "ami-0462a914135d20297"
