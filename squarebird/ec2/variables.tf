@@ -19,7 +19,7 @@ variable "ami" {
 }
 
 variable "instance_name" {
-  description = "Instance naem"
+  description = "Instance name"
   type = string
 }
 #
