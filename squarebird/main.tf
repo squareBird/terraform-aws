@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "3.5.0"
+      version = "5.9.0"
     }
   }
 }
@@ -18,8 +18,8 @@ provider "aws" {
 # main vpc
 module "main_vpc" {
   source   = "./vpc"
-  vpc_cidr = "192.168.0.0/16"
-  vpc_name = "main_vpc"
+  vpc_cidr = var.vpc_cidr
+  vpc_name = var.vpc_name
 }
 
 # 아래처럼 module.vpc.vpc_id 형태로 하면 생성 후 output을 사용할 수 있음
